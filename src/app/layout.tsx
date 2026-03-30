@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Cormorant_Garamond } from "next/font/google";
+import { Inter, Cormorant_Garamond, Fraunces } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -12,6 +12,12 @@ const cormorant = Cormorant_Garamond({
   weight: ["400", "500", "600", "700"],
   style: ["normal", "italic"],
   variable: "--font-brand",
+});
+
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  weight: ["700", "900"],
+  variable: "--font-display",
 });
 
 export const metadata: Metadata = {
@@ -28,7 +34,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="es" className={`${inter.variable} ${cormorant.variable}`}>
+    <html lang="es" className={`${inter.variable} ${cormorant.variable} ${fraunces.variable}`}>
       <body>{children}</body>
     </html>
   );
