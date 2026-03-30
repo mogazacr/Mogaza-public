@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+:root {
+  --mogaza-red: #c0564a;
+  --mogaza-red-dark: #a04038;
+  --mogaza-cream: #f5e0cc;
+  --mogaza-cream-light: #fdf6ee;
+  --mogaza-cream-bg: #faf5ef;
+  --mogaza-yellow: #f0c75e;
+  --mogaza-text: #3d2c2c;
+  --font-brand: "Cormorant Garamond", serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--mogaza-cream-bg);
+  color: var(--mogaza-text);
+  font-family: var(--font-sans, sans-serif);
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes wave-border {
+  0%   { border-radius: 60% 40% 55% 45% / 50% 60% 40% 50%; }
+  25%  { border-radius: 45% 55% 40% 60% / 60% 40% 55% 45%; }
+  50%  { border-radius: 55% 45% 60% 40% / 40% 55% 45% 60%; }
+  75%  { border-radius: 40% 60% 45% 55% / 55% 45% 60% 40%; }
+  100% { border-radius: 60% 40% 55% 45% / 50% 60% 40% 50%; }
+}
+
+.wave-border {
+  animation: wave-border 8s ease-in-out infinite;
+  border: 3px solid var(--mogaza-red);
+}
+
+@keyframes float-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-float-in {
+  animation: float-in 0.6s ease-out both;
+}
+
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+.stagger-6 { animation-delay: 0.6s; }
