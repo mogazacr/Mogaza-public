@@ -6,124 +6,78 @@ export const metadata: Metadata = {
 };
 
 /* ═══════════════════════════════════════════════════════
-   ICONS — all rendered at ~90×90 internal units
-   viewBox sized to content, displayed at consistent height
+   LUCIDE ICONS — stroke-based, viewBox 0 0 24 24
+   Source: lucide.dev (ISC license, free)
 ═══════════════════════════════════════════════════════ */
 
-/** Paper bag with two handle loops and bread inside */
+const iconProps = {
+  viewBox: "0 0 24 24",
+  fill: "none",
+  stroke: "#c0564a",
+  strokeWidth: "1.5",
+  strokeLinecap: "round" as const,
+  strokeLinejoin: "round" as const,
+  width: 72,
+  height: 72,
+};
+
 function IconBag() {
   return (
-    <svg viewBox="0 0 80 82" width="80" height="82" fill="none"
-      stroke="#c0564a" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-      {/* bag body — tapered trapezoid */}
-      <path d="M14,36 L9,72 L71,72 L66,36Z"/>
-      {/* bag top edge */}
-      <line x1="14" y1="36" x2="66" y2="36"/>
-      {/* LEFT handle loop */}
-      <path d="M22,36 C22,18 36,18 36,36"/>
-      {/* RIGHT handle loop */}
-      <path d="M44,36 C44,18 58,18 58,36"/>
-      {/* bread bun sitting in bag */}
-      <ellipse cx="40" cy="54" rx="17" ry="11"/>
-      <path d="M23,57 Q40,67 57,57"/>
+    <svg {...iconProps}>
+      <path d="M16 10a4 4 0 0 1-8 0" />
+      <path d="M3.103 6.034h17.794" />
+      <path d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z" />
     </svg>
   );
 }
 
-/** Calendar with "2-3" days and bread shape */
 function IconCalendar() {
   return (
-    <svg viewBox="0 0 90 95" width="88" height="88" fill="none"
-      stroke="#c0564a" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-      {/* calendar frame */}
-      <rect x="7" y="16" width="76" height="72" rx="4"/>
-      {/* header bar */}
-      <line x1="7" y1="33" x2="83" y2="33"/>
-      {/* ring pegs */}
-      <line x1="28" y1="7" x2="28" y2="25"/>
-      <line x1="62" y1="7" x2="62" y2="25"/>
-      {/* horizontal grid lines */}
-      <line x1="7" y1="53" x2="83" y2="53"/>
-      {/* vertical divider */}
-      <line x1="45" y1="33" x2="45" y2="88"/>
-      {/* "2 a 3" — large numerals rendered as SVG text */}
-      <text x="26" y="50" textAnchor="middle" fontSize="16" fontWeight="bold"
-        fill="#c0564a" stroke="none" fontFamily="Georgia, 'Times New Roman', serif">2</text>
-      <text x="64" y="50" textAnchor="middle" fontSize="16" fontWeight="bold"
-        fill="#c0564a" stroke="none" fontFamily="Georgia, 'Times New Roman', serif">3</text>
-      <text x="45" y="51" textAnchor="middle" fontSize="10"
-        fill="#c0564a" stroke="none" fontFamily="Georgia, serif" fontStyle="italic">días</text>
-      {/* bread shape in lower half */}
-      <ellipse cx="45" cy="74" rx="17" ry="10"/>
-      <path d="M28,74 Q45,85 62,74"/>
+    <svg {...iconProps}>
+      <path d="M8 2v4" />
+      <path d="M16 2v4" />
+      <rect width="18" height="18" x="3" y="4" rx="2" />
+      <path d="M3 10h18" />
+      <path d="M8 14h.01" />
+      <path d="M12 14h.01" />
+      <path d="M16 14h.01" />
+      <path d="M8 18h.01" />
+      <path d="M12 18h.01" />
+      <path d="M16 18h.01" />
     </svg>
   );
 }
 
-/** 4 bread slices fanned — rectangular body + arched crust top */
-function IconBreadSlices() {
+function IconBread() {
   return (
-    <svg viewBox="0 0 80 82" width="80" height="82" fill="none"
-      stroke="#c0564a" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-      {/*
-        Each slice: rectangle bottom + quadratic arch on top
-        Formula: M x,bottom L x,side Q midX,ctrlY x+w,side L x+w,bottom Z
-        Slices offset 11px right and arch rises higher each time
-      */}
-      {/* slice 1 (back-left) */}
-      <path d="M6,74  L6,44  Q17,22 28,44  L28,74  Z"/>
-      {/* slice 2 */}
-      <path d="M17,75 L17,40 Q28,18 39,40 L39,75 Z"/>
-      {/* slice 3 */}
-      <path d="M28,76 L28,36 Q39,14 50,36 L50,76 Z"/>
-      {/* slice 4 (front-right) */}
-      <path d="M39,77 L39,32 Q50,10 61,32 L61,77 Z"/>
+    <svg {...iconProps}>
+      <path d="m2.37 11.223 8.372-6.777a2 2 0 0 1 2.516 0l8.371 6.777" />
+      <path d="M21 15a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-5.25" />
+      <path d="M3 15a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h9" />
+      <path d="m6.67 15 6.13 4.6a2 2 0 0 0 2.8-.4l3.15-4.2" />
+      <rect width="20" height="4" x="2" y="11" rx="1" />
     </svg>
   );
 }
 
-/** Front-view refrigerator with snowflake on freezer door */
 function IconFridge() {
   return (
-    <svg viewBox="0 0 64 88" width="64" height="88" fill="none"
-      stroke="#c0564a" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-      {/* outer body */}
-      <rect x="10" y="5" width="44" height="76" rx="7"/>
-      {/* freezer / fridge divider — top 35% is freezer */}
-      <line x1="10" y1="32" x2="54" y2="32"/>
-      {/* freezer door handle */}
-      <line x1="40" y1="12" x2="40" y2="26"/>
-      {/* fridge door handle */}
-      <line x1="40" y1="39" x2="40" y2="72"/>
-      {/* snowflake — 6-pointed star at center of freezer section */}
-      {/* vertical */}
-      <line x1="26" y1="12" x2="26" y2="26"/>
-      {/* diagonal / */}
-      <line x1="19" y1="15.5" x2="33" y2="22.5"/>
-      {/* diagonal \ */}
-      <line x1="19" y1="22.5" x2="33" y2="15.5"/>
+    <svg {...iconProps}>
+      <path d="M5 6a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6Z" />
+      <path d="M5 10h14" />
+      <path d="M15 7v6" />
     </svg>
   );
 }
 
-/** Toaster oven / air fryer with knobs and window */
 function IconOven() {
   return (
-    <svg viewBox="0 0 90 74" width="90" height="74" fill="none"
-      stroke="#c0564a" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-      {/* appliance body */}
-      <rect x="6" y="12" width="78" height="56" rx="6"/>
-      {/* control panel divider */}
-      <line x1="6" y1="30" x2="84" y2="30"/>
-      {/* four knobs on control panel */}
-      <circle cx="20" cy="21" r="6"/>
-      <circle cx="37" cy="21" r="6"/>
-      <circle cx="54" cy="21" r="6"/>
-      <circle cx="71" cy="21" r="5"/>
-      {/* oven viewing window */}
-      <rect x="16" y="37" width="58" height="26" rx="4"/>
-      {/* window reflection gleam */}
-      <path d="M21,41 Q32,38 43,41"/>
+    <svg {...iconProps}>
+      <rect width="20" height="15" x="2" y="4" rx="2" />
+      <rect width="8" height="7" x="6" y="8" rx="1" />
+      <path d="M18 8v7" />
+      <path d="M6 19v2" />
+      <path d="M18 19v2" />
     </svg>
   );
 }
@@ -135,7 +89,7 @@ function IconOven() {
 function TipCard({ icon, text }: { icon: React.ReactNode; text: string }) {
   return (
     <div style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center" }}>
-      <div style={{ marginBottom: "0.8rem" }}>{icon}</div>
+      <div style={{ marginBottom: "0.9rem" }}>{icon}</div>
       <p style={{
         fontSize: "0.85rem",
         color: "#c0564a",
@@ -157,7 +111,6 @@ function TipCard({ icon, text }: { icon: React.ReactNode; text: string }) {
 export default function CuidadosPage() {
   return (
     <>
-      {/* SVG displacement filter for wavy border */}
       <svg width="0" height="0" style={{ position: "absolute", overflow: "hidden" }} aria-hidden="true">
         <defs>
           <filter id="squiggle" x="-8%" y="-8%" width="116%" height="116%">
@@ -220,7 +173,6 @@ export default function CuidadosPage() {
             </h1>
           </div>
 
-          {/* ── Divider ── */}
           <hr style={{ border: "none", borderTop: "1px solid #e8d5c0", margin: "0 0 2.25rem" }}/>
 
           {/* ── 2×2 grid ── */}
@@ -239,7 +191,7 @@ export default function CuidadosPage() {
               text="El pan se mantendrá fresco de 2 a 3 días a temperatura ambiente."
             />
             <TipCard
-              icon={<IconBreadSlices/>}
+              icon={<IconBread/>}
               text="Podés pedir tu pan rebanado. Si no lo está, rebanalo dentro de los primeros 2 días."
             />
             <TipCard
@@ -248,7 +200,7 @@ export default function CuidadosPage() {
             />
           </div>
 
-          {/* ── 5th tip (centered) ── */}
+          {/* ── 5th tip centered ── */}
           <div style={{ display: "flex", justifyContent: "center", marginBottom: "2.25rem" }}>
             <div style={{ maxWidth: 220 }}>
               <TipCard
@@ -258,7 +210,6 @@ export default function CuidadosPage() {
             </div>
           </div>
 
-          {/* ── Divider ── */}
           <hr style={{ border: "none", borderTop: "1px solid #e8d5c0", margin: "0 0 1.5rem" }}/>
 
           {/* ── Footer ── */}
